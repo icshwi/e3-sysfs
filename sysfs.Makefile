@@ -24,7 +24,7 @@
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 include $(E3_REQUIRE_TOOLS)/driver.makefile
-include $(where_am_I)/../configure/DECOUPLE_FLAGS
+include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 
 APP:=sysfs
 
@@ -35,3 +35,7 @@ HEADERS = sysfs.h
 # db rule is the default in RULES_E3, so add the empty one
 
 db:
+#
+.PHONY: vlibs
+vlibs:
+#
